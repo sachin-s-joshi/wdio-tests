@@ -1,0 +1,11 @@
+{
+    "cucumberautocomplete.steps": [
+        "features/step-definitions/*.ts",
+        "features/step-definitions/*/*.ts"
+    ],
+    "cucumberautocomplete.onTypeFormat": true,
+    "cucumberautocomplete.strictGherkinCompletion": false,
+    "editor.formatOnSave": true,
+    "cucumberautocomplete.smartSnippets": true,
+    "python.pythonPath": "/usr/local/bin/python3",
+}

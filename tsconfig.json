@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "outDir": "./.tsbuild/",
+    "sourceMap": false,
+    "target": "ES5",
+    "module": "commonjs",
+    "removeComments": true,
+    "noImplicitAny": true,
+    "strictPropertyInitialization": true,
+    "strictNullChecks": true,
+    "types": [
+      "node",
+      "webdriverio/sync",
+      "@wdio/cucumber-framework",
+      "@cucumber/cucumber",
+      "expect-webdriverio"
+    ]
+  },
+  "include": [
+    "features/*/*.ts",
+    "features/step-definitions/*.ts",
+    "wdio.conf.ts"
+  ],
+  "exclude": [
+    "./node_modules",
+  ]
+}
