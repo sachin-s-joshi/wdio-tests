@@ -1,5 +1,3 @@
-import { todoHome } from "../Identifiers/todoHome";
-
 class TodoPage {
 
     get taskInput() { return $('.new-todo') }
@@ -51,10 +49,15 @@ class TodoPage {
         browser.keys("Enter");
     }
 
-    notInactiveTab(task: string) {
+    notInactiveTab(task?: string) {
         console.log(task);
         $('*=Active').click();
-        expect(this.tasklists).not.toContain(task);  //wdio inbuilt helper will ensure that task does not exists in active list
+        if (task) {
+            expect(this.tasklists).not.toContain(task);
+        }
+        else
+            expect(this.tasklists).not.toBeDefined
+        //wdio inbuilt helper will ensure that task does not exists in active list
     }
 
     checkInCompletedTab(completedTask: string) {
@@ -68,6 +71,10 @@ class TodoPage {
         $('button*=Clear').click();
         $('*=Completed').click();
         expect(this.tasklists).not.toBePresent()
+    }
+
+    completeall() {
+        $('//label[@for="toggle-all"]').click();
     }
 
 }

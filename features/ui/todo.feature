@@ -38,3 +38,7 @@ Feature: I am able to add, delete, update tasks in todo app
     Scenario: I can clear my tasks using clear option
         Then I mark my "Task 1" complete
         And I can clear all my task from the todo list
+
+    Scenario: I can mark all my tasks complate in one go
+        Then I can mark all my tasks complete
+        And I should not see any task under active tab

@@ -47,5 +47,12 @@ Then('I should now see only completed tasks {string} on completed tab', function
     todoPage.checkInCompletedTab(completedTask);
 })
 Then('I can clear all my task from the todo list', function () {
-    todoPage.clearCompleted()
+    todoPage.clearCompleted();
+})
+Then('I can mark all my tasks complete', function () {
+    todoPage.completeall();
+
+})
+Then('I should not see any task under active tab', function () {
+    todoPage.notInactiveTab();
 })
