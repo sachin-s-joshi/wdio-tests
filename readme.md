@@ -48,3 +48,6 @@ Have covered basics and we can extend similar things for other endpoints as well
 
 > Note: Run in vscode for better integration of cucumber files and step files highlight, [cucumber extension](https://marketplace.visualstudio.com/items?itemName=alexkrechik.cucumberautocomplete)
 
+## Debug in VScode
+- I have created a launch.json file for debugging the code in vscode
+- Make sure to override the configuration as per the need and set variables in .env file to debug correctly
